@@ -51,8 +51,8 @@ recordRoutes.route("/update/:id").post( (req, response) => {
     let newvalues = {   
       $set: {     
         name: req.body.name,    
-        position: req.body.position,     
-        level: req.body.level,   
+        microchipNumber: req.body.microchipNumber,     
+        species: req.body.species,   
       }
      }
 });
