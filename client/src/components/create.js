@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom"; // !! NOTE: deviates from "react-router"
+import { useNavigate } from "react-router";
 
 export default function Create() {
     const [form, setForm] = useState({
