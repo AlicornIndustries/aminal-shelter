@@ -1,1 +1,1 @@
-The following code will serve as a viewing component for our records. It will fetch all the records in our database through a GET method.
+Connecting the Front End to the Back End

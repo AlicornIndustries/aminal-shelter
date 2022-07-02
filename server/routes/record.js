@@ -4,7 +4,9 @@ const express = require("express");
 // recordRoutes is an instance of the express route, takes control of requests starting with path /record
 const recordRoutes = express.Router();
 
-const dbo = require("mongodb").ObjectId;
+const dbo = require("../db/conn");
+
+const ObjectId = require("mongodb").ObjectId;
 
 // Get list of all records
 recordRoutes.route("/record").get( (req,res) => {

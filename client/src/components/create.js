@@ -18,11 +18,16 @@ export default function Create() {
 
     // Handle form submission // FUTURE: would also like to not hardcode form fields here (in case we change them elsewhere)
     async function onSubmit(e) {
+        
         e.preventDefault(); 
 
         // POST request sent to the create url -> add a record to the database
         const newAnimal = { ...form };
-        await fetch("http://localhost:5000/record/add", {
+
+        
+        
+        // DELETEME remove the const testPromise, just await
+        const testPromise = await fetch("http://localhost:5000/record/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -33,6 +38,10 @@ export default function Create() {
             window.alert(error);
             return;
         });
+
+        console.log(testPromise)
+        console.log(newAnimal); console.log('here'); // DELETEME
+        
 
         // Clear form after submission
         setForm({ name: "", microchipNumber: "", species: "" });
@@ -81,7 +90,7 @@ export default function Create() {
                 <div className="form-group">
                     <input
                         type="submit"
-                        value="Update Record"
+                        value="Create Animal"
                         className="btn btn-primary"
                     />
                 </div>

@@ -45,7 +45,7 @@ export default function RecordList() {
             method: "DELETE"
         });
 
-        const newRecords = records.filter( (elem) => elem._id != id ); // filter out the element with deleted id
+        const newRecords = records.filter( (elem) => elem._id !== id ); // filter out the element with deleted id
         setRecords(newRecords);
     }
 

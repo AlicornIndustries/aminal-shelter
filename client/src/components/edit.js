@@ -24,7 +24,7 @@ export default function Edit() {
 
             const record = await response.json();
             if(!record) {
-                window.alert(`Record with id ${id} not found`);
+                window.alert(`Record with id ${params.id} not found`);
                 navigate("/");
                 return;
             }
@@ -53,7 +53,7 @@ export default function Edit() {
 
         await fetch(`http://localhost:5000/update/${params.id}`, {
             method: "POST",
-            body: JSON.stringify(editedPerson),
+            body: JSON.stringify(editedAnimal),
             headers: {
                 'Content-Type': 'application/json'
             }
